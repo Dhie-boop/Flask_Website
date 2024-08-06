@@ -59,7 +59,7 @@ def login():
 @app.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('home'))
+    return redirect(url_for('dashboard'))
 
 @app.route('/dashboard')
 def dashboard():
