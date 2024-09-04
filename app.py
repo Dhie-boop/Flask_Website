@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, url_for, flash, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager, UserMixin, login_user, current_user, logout_user, login_required
-from webform import RegistrationForm, LoginForm  # Ensure this matches your form filename
+from webform import RegistrationForm, LoginForm  
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key'
@@ -96,7 +96,7 @@ def contact():
 
 if __name__ == '__main__':
     with app.app_context():
-        db.create_all()  # Create the database tables
+        db.create_all()  
     app.run(debug=True)
 
 
